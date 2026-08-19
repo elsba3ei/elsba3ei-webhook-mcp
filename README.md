@@ -10,13 +10,19 @@
 
 ## ⚡ Overview & Capabilities
 
-The `elsba3ei-webhook-mcp` server allows Claude Desktop, Antigravity, and AI agents to:
+The `elsba3ei-webhook-mcp` server connects **ALL major LLM models and AI coding agents** (tested & verified with **ChatGPT / OpenAI Codex**, **Anthropic Claude**, **Google Antigravity**, and **Cursor / Windsurf**) to:
 
 - Instantly spin up local (`http://127.0.0.1:4040/capture`) and public Cloudflare Quick Tunnels (`https://*.trycloudflare.com/capture`) with no account needed.
 - Inspect incoming HTTP/HTTPS requests (method, headers, query, client IP, JSON, form data, raw text, or binary hex dump).
 - Dynamically mock responses with custom status codes, content-types, headers, and simulated response latency.
 - Poll & block waiting for out-of-band SSRF / webhook callbacks (`wait_for_request`).
 - Replay and forge custom HTTP requests (`replay_request`).
+
+### 🧪 Verified LLM & Agent Compatibility:
+- 🟢 **ChatGPT & OpenAI Codex**: Automated webhook testing & live interaction loops.
+- 🟢 **Anthropic Claude (Claude Desktop & API)**: 1-click FastMCP tool execution.
+- 🟢 **Google Antigravity**: Complete agent skill and reactive tool call integration.
+- 🟢 **Cursor & Windsurf IDEs**: In-editor OOB callback capture and repeater.
 
 ---
 
