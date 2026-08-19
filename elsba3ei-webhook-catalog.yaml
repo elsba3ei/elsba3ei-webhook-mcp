@@ -1,0 +1,42 @@
+version: 2
+name: elsba3ei-webhook-catalog
+displayName: elsba3ei Webhook & SSRF Inspector
+registry:
+  elsba3ei-webhook:
+    description: "High-performance local & public Webhook Inspector and Burp Suite Collaborator alternative for testing SSRF, APIs, and Out-Of-Band (OOB) interactions with Cloudflare Quick Tunnel support, dynamic mock responses, live request capture, and callback polling."
+    title: "elsba3ei Webhook Inspector"
+    type: server
+    dateAdded: "2026-08-18T00:00:00Z"
+    image: elsba3ei-webhook:latest
+    ref: ""
+    readme: ""
+    toolsUrl: ""
+    source: ""
+    upstream: ""
+    icon: ""
+    tools:
+      - name: get_webhook_urls
+      - name: start_tunnel
+      - name: stop_tunnel
+      - name: get_tunnel_status
+      - name: list_requests
+      - name: get_request_details
+      - name: wait_for_request
+      - name: configure_mock_response
+      - name: reset_mock_response
+      - name: clear_requests
+      - name: delete_request
+      - name: replay_request
+      - name: get_server_status
+    metadata:
+      category: security
+      tags:
+        - webhook
+        - ssrf
+        - collaborator
+        - oob
+        - cloudflare-tunnel
+        - mock-server
+        - repeater
+      license: MIT
+      owner: local
