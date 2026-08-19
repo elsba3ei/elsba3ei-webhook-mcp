@@ -46,22 +46,31 @@ The `elsba3ei-webhook-mcp` server connects **ALL major LLM models and AI coding 
 
 ---
 
-## 🚀 Quick Start Setup (Windows PowerShell)
+## 🚀 Quick Start Setup
 
-1. Open PowerShell and navigate to this directory:
+### 🪟 Windows Setup (PowerShell)
+```powershell
+cd G:\Playing\elsba3ei-webhook-mcp
+.\setup.ps1
+```
 
-   ```powershell
-   cd G:\Playing\elsba3ei-webhook-mcp
-   ```
+### 🐧 Linux / Ubuntu Setup
+```bash
+# 1. Install Python3 & venv
+sudo apt update && sudo apt install -y python3 python3-venv python3-pip
 
-2. Run the automated setup script:
+# 2. Make scripts executable and run
+cd elsba3ei-webhook-mcp
+chmod +x start.sh setup.sh
+./start.sh
+```
 
-   ```powershell
-   .\setup.ps1
-   ```
-
-3. Restart Claude Desktop completely (Quit from system tray, then reopen).
-4. Start a new conversation in Claude to load the new tools.
+### 🍏 macOS Setup
+```bash
+cd elsba3ei-webhook-mcp
+chmod +x start.sh setup.sh
+./start.sh
+```
 
 ---
 
