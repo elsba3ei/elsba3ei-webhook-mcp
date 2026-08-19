@@ -72,43 +72,16 @@ chmod +x start.sh setup.sh
 ./start.sh
 ```
 
----
-
-## 🐳 Docker & MCP Installation
-
-### Step 1: Build the Docker Image
-
-```bash
-docker build -t elsba3ei-webhook:latest .
-```
-
-### Step 2: Add to Docker MCP Profile (Docker Desktop 4.40+)
-
-```bash
-docker mcp profile server add default --server file:///G:/Playing/elsba3ei-webhook-mcp/elsba3ei-webhook-catalog.yaml
-```
-
-### Step 3: Connect to Claude Desktop
-
-```bash
-docker mcp client connect claude-desktop --global --profile default
-```
-
-### Step 4: Verify Registered Profile & Tools
-
-```bash
-docker mcp profile server ls
-docker mcp tools ls | Select-String "elsba3ei"
-```
+> [!TIP]
+> **No Docker Required**: This MCP server runs directly with standard Python (`python elsba3ei_webhook_server.py`). Docker is 100% optional.
 
 ---
 
-## ⚙️ Configuring Claude Desktop Manually
+## ⚙️ MCP Client Configuration (Claude Desktop, Cursor, Antigravity)
 
-Config file location: `%APPDATA%\Claude\claude_desktop_config.json`
+Connect the MCP server to your AI assistant using direct Python execution.
 
-### Direct Python Execution Mode (Recommended)
-
+### 🪟 Windows (`%APPDATA%\Claude\claude_desktop_config.json` or `.cursor/mcp.json`):
 ```json
 {
   "mcpServers": {
@@ -120,16 +93,39 @@ Config file location: `%APPDATA%\Claude\claude_desktop_config.json`
 }
 ```
 
-### Docker Container Mode
+### 🐧 Linux & 🍏 macOS (`~/.config/Claude/claude_desktop_config.json` or `~/.cursor/mcp.json`):
+```json
+{
+  "mcpServers": {
+    "elsba3ei-webhook": {
+      "command": "/path/to/elsba3ei-webhook-mcp/.venv/bin/python",
+      "args": ["/path/to/elsba3ei-webhook-mcp/elsba3ei_webhook_server.py"]
+    }
+  }
+}
+```
 
+---
+
+## 🐳 Optional: Docker Deployment (Alternative)
+
+If you prefer containerized deployment with Docker:
+
+```bash
+# 1. Build Docker image
+docker build -t elsba3ei-webhook:latest .
+
+# 2. Run container
+docker run -i --rm -p 4040:4040 elsba3ei-webhook:latest
+```
+
+*Docker MCP Configuration:*
 ```json
 {
   "mcpServers": {
     "elsba3ei-webhook": {
       "command": "docker",
       "args": [
-        "--context",
-        "desktop-linux",
         "run",
         "-i",
         "--rm",
