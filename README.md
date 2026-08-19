@@ -143,15 +143,11 @@ Config file location: `%APPDATA%\Claude\claude_desktop_config.json`
 
 ---
 
-## 👨‍💻 Author & Developer
-
-Developed with ❤️ by **Ahmed E. El-Sbaei**
-
-- 🌐 **LinkedIn**: [Ahmed E. El-Sbaei](https://www.linkedin.com/in/elsba3ei)
-- 🐙 **GitHub**: [@elsba3ei](https://github.com/elsba3ei)
-
----
-
 ## 📄 License
 
-Distributed under the **MIT License** — © 2026 **Ahmed E. El-Sbaei**. See [`LICENSE`](file:///G:/Playing/elsba3ei-webhook-mcp/LICENSE) for details.
+Distributed under the **MIT License**.
+
+<div align="center">
+  Developed by <b>Ahmed E. El-Sbaei</b> — © 2026 Ahmed E. El-Sbaei<br>
+  <a href="http://linkedin.com/in/elsba3ei">http://linkedin.com/in/elsba3ei</a>
+</div>
